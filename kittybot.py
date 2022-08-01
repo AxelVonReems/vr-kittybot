@@ -169,9 +169,6 @@ def main():
     updater.dispatcher.add_handler(MessageHandler(
         Filters.text, message_sender)
     )
-    # updater.dispatcher.add_handler(CommandHandler('start', wake_up))
-    # updater.dispatcher.add_handler(CommandHandler('newdog', new_dog))
-    # updater.dispatcher.add_handler(CommandHandler('newcat', new_cat))
 
     updater.start_polling()
     updater.idle()
@@ -179,38 +176,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-"""
-def new_dog(update, context):
-    chat = update.effective_chat
-    context.bot.send_message(
-        chat_id=chat.id,
-        text='Вот тебе ещё один пёсик! Гав!',
-    )
-    context.bot.send_photo(chat.id, get_new_dog_image())
-
-
-def new_cat(update, context):
-    chat = update.effective_chat
-    context.bot.send_message(
-        chat_id=chat.id,
-        text='Вот тебе ещё один котик! Гав!',
-    )
-    context.bot.send_photo(chat.id, get_new_cat_image())
-
-
-def wake_up(update, context):
-    chat = update.effective_chat
-    name = update.message.chat.first_name
-    button = ReplyKeyboardMarkup([['/start']], resize_keyboard=True)
-
-    context.bot.send_message(
-        chat_id=chat.id,
-        text=('Привет, {}. Посмотри какого пёсика я тебе нашел! Гав!'.
-              format(name)),
-        reply_markup=button
-    )
-
-    context.bot.send_photo(chat.id, get_new_dog_image())
-"""
