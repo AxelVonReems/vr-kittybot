@@ -29,7 +29,6 @@ CAT_TEXT = 'Хочу котика'
 SAMOYED_TEXT = 'Хочу самоеда'
 JRT_TEXT = 'Хочу курьерчика'
 BIRD_TEXT = 'Хочу птичку'
-PLANT_TEXT = 'Хочу растение'
 
 
 BUTTONS = [
